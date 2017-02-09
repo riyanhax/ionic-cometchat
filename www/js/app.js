@@ -18,9 +18,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       cordova.plugins.Keyboard.disableScroll(true);
 
     }
-	if(typeof(ReadyUI) != 'undefined') {
-      ReadyUI.setUrl("https://chat.phpchatsoftware.com/"); // use cometchat demo server. Feel free to use yours
-    }
+    // For IOS, it is ReadyUI, for Android it is Readyui (ui in lowercase. Weird but cometchat has made 2 differents cordova plugin, one for IOS, the other for Android)
+	if(ionic.Platform.isIOS()) {
+		if(typeof(ReadyUI) != 'undefined') {
+		  ReadyUI.setUrl("https://chat.phpchatsoftware.com/"); // use cometchat demo server. Feel free to use yours
+		  alert('ReadyUI for IOS loaded');
+		}
+		else {
+			  alert('ReadyUI is undefined. It sounds plugin was not loaded with app');
+		}
+	}
+	else {
+		if(typeof(Readyui) != 'undefined') {
+		  Readyui.setUrl("https://chat.phpchatsoftware.com/"); // use cometchat demo server. Feel free to use yours
+		  alert('Readyui for Android loaded');
+		}
+		else {
+			  alert('ReadyUI is undefined. It sounds plugin was not loaded with app');
+		}
+	}
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
