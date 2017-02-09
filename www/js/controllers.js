@@ -5,9 +5,16 @@ angular.module('starter.controllers', [])
    $scope.launchComet = function (){
       ReadyUI.loginWithUsername("demo1","user1",function (result){});
     }
+    $scope.launchCometDemo2 = function (){
+      ReadyUI.loginWithUsername("demo2","user2",function (result){});
+    }
     $scope.loginCallBack = function (result){
       // alert("loginCallBack");
       // alert(result);
+    }
+    $scope.logout = function (result){
+      ReadyUI.logout();
+      ReadyUI.setUrl("https://chat.phpchatsoftware.com/");
     }
 
 })
