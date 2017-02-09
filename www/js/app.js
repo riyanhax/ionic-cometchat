@@ -1,8 +1,4 @@
 // Ionic Starter App
-                //ReadyUI.loginWithUsername("demogivacall@digitalsense.fr","demo",loginCallBack);
-                //ReadyUI.setUrl("http://givacall.digitalsense.fr/givacall/cometchat/");
-               
-          
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
@@ -22,8 +18,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       cordova.plugins.Keyboard.disableScroll(true);
 
     }
-    if (ReadyUI) {
-      ReadyUI.setUrl("https://chat.phpchatsoftware.com/");
+	if(typeof(ReadyUI) != 'undefined') {
+      ReadyUI.setUrl("https://chat.phpchatsoftware.com/"); // use cometchat demo server. Feel free to use yours
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
