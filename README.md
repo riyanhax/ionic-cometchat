@@ -45,6 +45,7 @@ For Android :
 	cordova platform add android  --save	
 
 Then on your ionic folder, then platform/android, open file build.gradle and add before the end curly bracket of android{ :
+
 packagingOptions {
         exclude 'META-INF/DEPENDENCIES.txt'
         exclude 'META-INF/LICENSE.txt'
@@ -81,6 +82,13 @@ compile 'com.android.support:appcompat-v7:23.0.0'
     compile 'com.tubb.smrv:swipemenu-recyclerview:5.2.1'
     compile 'com.github.bumptech.glide:glide:3.5.2'
     compile 'se.emilsjolander:stickylistheaders:2.7.0'    
+
+If you have a bug like that :
+
+You need to add :
+
+ multiDexEnabled true , at the end of defaultConfig {
+
 
 - then compile for android from command line
      ionic build android
