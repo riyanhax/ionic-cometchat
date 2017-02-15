@@ -83,11 +83,51 @@ compile 'com.android.support:appcompat-v7:23.0.0'
     compile 'com.github.bumptech.glide:glide:3.5.2'
     compile 'se.emilsjolander:stickylistheaders:2.7.0'    
 
-If you have a bug like that :
-
 You need to add :
 
- multiDexEnabled true , at the end of defaultConfig {
+    defaultConfig {
+            ...
+            minSdkVersion 21 
+            targetSdkVersion 25
+            multiDexEnabled true
+    }
+
+Add android dependencies :
+
+Create a file ChatApplication.java in folder /platforms/android/src/com/ionicframework/tabs631558/
+
+Put this in your file :
+------
+    package com.ionicframework.tabs631558;
+
+    import com.inscripts.activities.CCApplication;
+
+    public class ChatApplication extends CCApplication {
+    }
+------
+
+In your AndroidManifest.xml file add theses lines : 
+
+<application 
+android:name=".ChatApplication" 
+... 
+>
+
+
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+<uses-permission android:name="android.permission.READ_CONTACTS" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.SEND_SMS" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+
 
 
 - then compile for android from command line
