@@ -47,7 +47,7 @@ For Android :
 Then on your ionic folder, then platform/android, open file build.gradle and add before the end curly bracket of android{ :
 	
 	packagingOptions {
-	exclude 'META-INF/DEPENDENCIES.txt'
+		exclude 'META-INF/DEPENDENCIES.txt'
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/NOTICE'
@@ -105,7 +105,6 @@ Put this in your file :
 
     public class ChatApplication extends CCApplication {
     }
-------
 
 In your AndroidManifest.xml file add theses lines : 
 
