@@ -97,7 +97,7 @@ Add android dependencies :
 Create a file ChatApplication.java in folder /platforms/android/src/com/ionicframework/tabs631558/
 
 Put this in your file :
-------
+
     package com.ionicframework.tabs631558;
 
     import com.inscripts.activities.CCApplication;
