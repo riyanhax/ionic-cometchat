@@ -47,16 +47,16 @@ For Android :
 Then on your ionic folder, then platform/android, open file build.gradle and add before the end curly bracket of android{ :
 	
 	packagingOptions {
-   		exclude 'META-INF/DEPENDENCIES.txt'
-        	exclude 'META-INF/LICENSE.txt'
-        	exclude 'META-INF/NOTICE.txt'
-        	exclude 'META-INF/NOTICE'
-        	exclude 'META-INF/LICENSE'
-        	exclude 'META-INF/DEPENDENCIES'
-        	exclude 'META-INF/notice.txt'
-        	exclude 'META-INF/license.txt'
-        	exclude 'META-INF/dependencies.txt'
-        	exclude 'META-INF/LGPL2.1'
+	exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
 	}
 
 Then on the same file (build.gradle), add in dependencies{ part, after these line :
